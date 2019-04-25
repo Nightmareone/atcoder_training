@@ -1,3 +1,5 @@
+## https://atcoder.jp/contests/abs/tasks/abc083_b
+## 学习了Java中int和char的转换
 import java.util.*;
 import java.lang.*;
 public class Main{

@@ -1,0 +1,33 @@
+import java.util.*;
+import java.lang.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+
+        int N = sc.nextInt();
+        int A = sc.nextInt();
+        int B = sc.nextInt();
+        // ArrayList<Integer> result_arr = new ArrayList<Integer>();
+        int Amount = 0;
+
+        for(int i = 1; i <= N; i++){
+            int amount = 0;
+            if(i > 9){
+                String i_str = String.valueOf(i);
+                char[] array = i_str.toCharArray();
+                for(char x : array){
+                    int re = Integer.parseInt(x + "");
+                    amount += re;
+                }
+            }else{
+                amount = i;
+            }
+
+            if(amount >= A && amount <= B){
+                Amount += i;
+            }
+        }
+
+        System.out.println(Amount);
+    }
+}
